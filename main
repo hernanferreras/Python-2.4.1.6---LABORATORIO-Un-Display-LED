@@ -79,3 +79,5 @@ strng_num = str(num)
 print(strng_num)
 
 for x in strng_num:
+    valor = dicc.get(x)
+    print(valor, end="")
