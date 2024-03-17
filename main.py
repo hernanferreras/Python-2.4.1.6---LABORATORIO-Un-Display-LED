@@ -9,6 +9,8 @@ led = (('***','* *','* *','* *','***')    #numero_0
     ,('***','* *','***','* *','***')    #numero_8
     ,('***','* *','***','  *','***')    #numero_9
     )
-    
+
+num = int(input("ingrese un numero no negativo para imprimir en el led: ")) 
+
 for x in range(5):
-    print(led[9][x])
+    print(led[num][x])
