@@ -1,5 +1,3 @@
-led = ["*  ", "  *", "* *", "***"]   
-
 def cero(lista): #numero 0
     print(lista[3])
     for x in range(3):
@@ -9,7 +7,7 @@ def cero(lista): #numero 0
 def uno(lista):  #numero 1
     for x in range(5):
         print(lista[1])
-        
+    
 def dos(lista):  #numero 2
     print(lista[3])
     print(lista[1])
@@ -22,7 +20,7 @@ def tres(lista):  #numero 3
         print(lista[3])
         print(lista[1])
     print(lista[3])
-
+   
 def cuatro(lista):  #numero 4
     for x in range(2):
         print(lista[2])
@@ -63,7 +61,7 @@ def nueve(lista):  #numero 9
     print(lista[3])
 
 dicc = {
-    "0":"cero(led)",
+    "0":"cero",
     "1":"uno",
     "2":"dos",
     "3":"tres",
@@ -74,10 +72,30 @@ dicc = {
     "8":"ocho",
     "9":"nueve",
 }
-    
-num = int(input("Ingrese un numero para presentarlo en el led: "))
-num_strng= str(num)
+
+led = ["*  ", "  *", "* *", "***"]     
+num_strng = input("Ingrese un numero para presentarlo en el led: ")
+#num_strng= str(num)
 
 for x in num_strng:
     valor = dicc[x]
-    print(valor, end="")
+    if valor == "cero":
+        cero(led)
+    elif valor == "uno":
+        uno(led)
+    elif valor == "dos":
+        dos(led)
+    elif valor == "tres":
+        tres(led)
+    elif valor == "cuatro":
+        cuatro(led)
+    elif valor == "cinco":
+        cinco(led)
+    elif valor == "seis":
+        seis(led)
+    elif valor == "siete":
+        siete(led)
+    elif valor == "ocho":
+        ocho(led)
+    else:
+        nueve(led)
