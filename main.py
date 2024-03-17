@@ -1,3 +1,5 @@
+led = ["*  ", "  *", "* *", "***"]   
+
 def cero(lista): #numero 0
     print(lista[3])
     for x in range(3):
@@ -61,23 +63,21 @@ def nueve(lista):  #numero 9
     print(lista[3])
 
 dicc = {
-    0:"cero",
-    1:"uno",
-    2:"dos",
-    3:"tres",
-    4:"cuatro",
-    5:"cinco",
-    6:"seis",
-    7:"siete",
-    8:"ocho",
-    9:"nueve",
+    "0":"cero(led)",
+    "1":"uno",
+    "2":"dos",
+    "3":"tres",
+    "4":"cuatro",
+    "5":"cinco",
+    "6":"seis",
+    "7":"siete",
+    "8":"ocho",
+    "9":"nueve",
 }
     
-led = ["*  ", "  *", "* *", "***"]   
 num = int(input("Ingrese un numero para presentarlo en el led: "))
-strng_num = str(num)
-print(strng_num)
+num_strng= str(num)
 
-for x in strng_num:
-    valor = dicc.get(x)
+for x in num_strng:
+    valor = dicc[x]
     print(valor, end="")
